@@ -22,13 +22,13 @@ with open (csv_path) as csv_file:
     max_decrease = min(change)
     date_decrease = key_csv[change.index(max_decrease)]
 
-with open ("result.txt",'w') as file_csv:
-    contents=['Financial Analysis\n','-'*30,
-              f'\nTotal Month: {total_months}',
-              f'\nTotal: ${net_total_amount}',
-              f'\nAverage Change: ${round(avg_change, 2)}',
-              f'\nGreatest Increase in Profits: {date_increase} (${max_increase})',
-              f'\nGreatest Decrease in Profits: {date_decrease} (${max_decrease})']
+with open ("analysis/result.txt",'w') as file_csv:
+    contents=['Financial Analysis\n',f"{'-'*30}\n",
+              f'Total Month: {total_months}\n',
+              f'Total: ${net_total_amount}\n',
+              f'Average Change: ${round(avg_change, 2)}\n',
+              f'Greatest Increase in Profits: {date_increase} (${max_increase})\n',
+              f'Greatest Decrease in Profits: {date_decrease} (${max_decrease})']
 
     for j in range(len(contents)):
         print(contents[j])
