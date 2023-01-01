@@ -38,5 +38,3 @@ with open ("result.txt",'w') as file_csv:
 
 
 
-
-
