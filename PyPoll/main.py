@@ -7,12 +7,12 @@ with open (csv_path) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
 
     csv_header = next(csv_reader)
-    print(f'CSV Header: {csv_header}')
+    #print(f'CSV Header: {csv_header}')
     csv_reader_list=[i[2] for i in csv_reader]
     total_vote= len(csv_reader_list)
     candidate = list(set(csv_reader_list))
-    temp_list= [(candidate[j],round(csv_reader_list.count(candidate[j])*100/total_vote,3),csv_reader_list.count(candidate[j]))
-                  for j in range(len(candidate))]
+    temp_list= [(candidate[j],round(csv_reader_list.count(candidate[j])*100/total_vote,3),
+                 csv_reader_list.count(candidate[j])) for j in range(len(candidate))]
 
     result_list=sorted(temp_list,key=lambda x: x[0])
     winner=sorted(temp_list,key=lambda x : -x[2])[0]
