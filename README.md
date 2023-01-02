@@ -13,7 +13,7 @@
 
 ### Main Idea
 - There are just two columns. So I decied to use dictionary function after reading csv file
-- It should be printed on the terminal and saved as a text file, so save it using the print option ("~".file="~") to simplify code
+- It should be printed on the terminal and saved as a text file, so save it using the print option (~.file=~) to simplify code
 
 ### Detail
 - I make two lists("date", "profit") convinently by using keys and values
