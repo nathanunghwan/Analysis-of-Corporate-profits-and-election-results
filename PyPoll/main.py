@@ -16,8 +16,10 @@ with open (csv_path) as csv_file:
     candidate = list(set(csv_reader_list))
     #print(candidate) -->['Charles Casper Stockham', 'Raymon Anthony Doane', 'Diana DeGette']
     # Candidate name, rate of vote, numbers of vote
-    temp_list= [(candidate[j],round(csv_reader_list.count(candidate[j])*100/total_vote,3),
-                 csv_reader_list.count(candidate[j])) for j in range(len(candidate))]
+    temp_list= [(candidate[j],
+                 round(csv_reader_list.count(candidate[j])*100/total_vote,3),
+                 csv_reader_list.count(candidate[j]))
+                for j in range(len(candidate))]
     #print(temp_list)--> [('Diana DeGette', 73.812, 272892), ('Charles Casper Stockham', 23.049, 85213), ('Raymon Anthony Doane', 3.139, 11606)]
     # sort by name
     result_list=sorted(temp_list,key=lambda x: x[0])
