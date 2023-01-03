@@ -11,10 +11,10 @@ with open (csv_path) as csv_file:
     dict_csv = dict(csv_reader)
     # Extract keys and convert to list ----"Month"
     date_list = list(dict_csv.keys())
-    #print(key_csv) -->['Jan-10',~~, 'Feb-17']
+    #print(date_list) -->['Jan-10',~~, 'Feb-17']
     # Extract values and convert to list(int type) ---"Profit/loss"
     profit_list = list(map(int,dict_csv.values()))
-    #print(value_csv) -->[1088983, -354534,~~ , 607208, 382539]
+    #print(profit_list) -->[1088983, -354534,~~ , 607208, 382539]
     # Total Profit/Loss
     net_total_amount = sum(profit_list)
     # Total Months
